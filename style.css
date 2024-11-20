@@ -1,0 +1,407 @@
+ /* IMPORTED FONTS */
+ @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+ /* CUSTOM VALUE PROPERTIES*/
+ :root {
+     --primary-color: seagreen;
+     --secondary-color: black;
+     --background-color: whitesmoke, snow, white;
+     --general-fontStyle: Tahoma, "Roboto", "Open Sans", "Lato", "Merriweather";
+     --headingFont: "Oswald", "Montserrat", "Playfair";
+     --mobile-fontSize: 1rem;
+     --tablet-fontSize: 1.125rem;
+     --desktop-fontSize: 1.25rem;
+     --mobile-H1: 24px;
+     --tablet-H1: 28px;
+     --desktop-H1: 32px;
+     --mobile-H2: 21px;
+     --tablet-H2: 25px;
+     --desktop-H2: 29px;
+     --small-text: 12px;
+     --medium-small-text: 14px;
+     --large-small-text: 16px;
+ }
+
+ /* Basic reset */
+ *,
+ *::before,
+ *::after {
+     margin: 0;
+     padding: 0;
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ body {
+     font-family: var(--general-fontStyle);
+     line-height: 1.6rem;
+     font-size: var(--mobile-fontSize);
+     background-color: rgb(21, 20, 20);
+     color: #ffffff;
+     box-sizing: border-box;
+     height: 100vh;
+     font-weight: 600;
+ }
+
+ /* Navigation */
+ header {
+     position: static;
+     top: 0;
+     background: var(--primary-color);
+     color: #fff;
+     padding: 1rem 0;
+     position: relative;
+     display: grid;
+     grid-template-columns: 50px 1fr;
+     grid-template-rows: auto;
+     max-width: 100vw;
+     height: auto;
+     z-index: 100;
+
+ }
+
+ img {
+     display: block;
+     width: 100%;
+     height: auto;
+ }
+
+ .logo h1 {
+     color: var(--secondary-color);
+     margin-right: 1rem;
+     float: right;
+     width: fit-content;
+     font-size: var(--mobile-H1);
+ }
+
+ /* Navigation toggle button */
+ .toggleNav {
+     margin-top: auto;
+     margin-left: auto;
+     width: 25px;
+     height: 25px;
+     border: tomato;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-direction: column;
+     padding: 2px;
+     cursor: pointer;
+     grid-column: 1/2;
+     grid-row: 1/2;
+ }
+
+ span.bar {
+     width: 100%;
+     height: 1px;
+     background-color: rgb(0, 0, 0);
+ }
+
+ #navigation {
+     display: none;
+     flex-direction: column;
+     align-items: center;
+     grid-column: 2/3;
+     grid-row: -1;
+ }
+
+ #navigation.active,
+ .nav-links {
+     display: flex;
+     flex-direction: column;
+ }
+
+ /* Navigation toggle button style END*/
+ .nav-links {
+     list-style: none;
+ }
+
+ .nav-links a {
+     color: var(--secondary-color);
+     text-decoration: none;
+     text-transform: uppercase;
+     font-size: var(--small-text);
+ }
+
+ .nav-links li a:visited {
+     color: var(--secondary-color);
+     text-decoration: none;
+ }
+
+ .nav-links li a:hover {
+     color: seashell;
+     padding: 0;
+     margin: 0;
+     text-decoration: 2px underline rgb(255, 255, 255);
+ }
+
+ .nav-links li a:active {
+     color: red;
+     text-decoration: underline;
+ }
+
+ /* content section style */
+
+ #content {
+     object-fit: cover;
+     height: auto;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background: scroll url(images/restuarant.jpg);
+
+ }
+
+ p {
+     padding: 5px;
+     display: block;
+ }
+
+ /* Section Hero style */
+ .hero {
+     position: relative;
+     height: auto;
+     background-color: white;
+     background-image: radial-gradient(rgba(255, 250, 250, 0.363), rgba(245, 245, 245, 0.236), grey, rgb(46, 47, 47));
+
+ }
+
+ .slider {
+     top: 0;
+     position: relative;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .slides {
+     display: none;
+     max-width: 100%;
+     max-height: 100%;
+     object-fit: cover;
+     border-radius: 10px;
+ }
+
+ section {
+     padding: 2rem 5%;
+ }
+
+ /* Footer sections */
+ footer {
+     background: var(--primary-color);
+     color: black;
+     text-align: center;
+     position: static;
+     bottom: 0;
+     padding: 15px;
+     font-size: var(--small-text);
+ }
+
+ footer a:link {
+     color: var(--secondary-color);
+     text-decoration: none;
+ }
+
+ footer a:active {
+     color: red;
+ }
+
+ footer a:hover {
+     color: snow;
+     text-decoration: underline;
+     padding: 0;
+     margin: 0;
+ }
+
+ footer a:visited {
+     color: #161515;
+ }
+
+ .menu {
+     text-decoration: none;
+     color: var(--primary-color);
+ }
+
+ .menu:active {
+     color: red;
+ }
+
+ .menu:hover {
+     color: white;
+     text-transform: uppercase;
+     padding: 0;
+     margin: 0;
+     text-decoration: underline;
+ }
+
+ .menu:visited {
+     color: var(--primary-color);
+ }
+
+ /* Responsive designs */
+ /* MEDIUM DEVICES */
+ @media screen and (min-width: 600px) and (max-width:1023px) {
+     body {
+         font-size: var(--tablet-fontSize);
+     }
+
+     header#header {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+     }
+
+     /* Navigation style */
+     .toggleNav {
+         display: none;
+     }
+
+     h1 {
+         font-size: var(--tablet-H1);
+     }
+
+     h2 {
+         font-size: var(--tablet-H2);
+     }
+
+     .nav-links li {
+         display: flex;
+         flex-direction: row;
+         margin-left: 1.5rem;
+     }
+
+     .nav-links a {
+         font-size: var(--medium-small-text);
+     }
+
+     #navigation.active,
+     .nav-links {
+         display: flex;
+         flex-direction: row;
+     }
+
+     #navigation {
+         display: unset;
+     }
+
+
+     /* Navigation toggle button style END*/
+     .nav-links {
+         list-style: none;
+     }
+
+     .flex {
+         display: flex;
+         flex-direction: row;
+     }
+
+     footer {
+         padding: 20px;
+         font-size: var(--medium-small-text);
+     }
+
+     /* Style for contact page START */
+     #contact {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-evenly;
+         align-items: center;
+         width: 100%;
+     }
+
+     #contactDiv {
+         padding: 5px;
+         width: 50%;
+     }
+
+     #form {
+         padding: 5px;
+         width: 50%;
+     }
+
+     /* STYLE FOR CONTACT PAGE END */
+ }
+
+ /* Large device style */
+ @media screen and (min-width:1024px) {
+     body {
+         font-size: var(--desktop-fontSize);
+     }
+
+     header#header {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+     }
+
+     h1 {
+         font-size: var(--desktop-H1);
+     }
+
+     h2 {
+         font-size: var(--desktop-H2);
+     }
+
+     .toggleNav {
+         display: none;
+     }
+
+     #navigation.active,
+     .nav-links {
+         display: flex;
+         flex-direction: row;
+     }
+
+     #navigation {
+         display: unset;
+     }
+
+     .nav-links a {
+         width: fit-content;
+         padding: 10px;
+         font-size: var(--large-small-text);
+     }
+
+     .flex {
+         display: flex;
+         flex-direction: row;
+     }
+
+     #content {
+         object-fit: cover;
+         height: auto;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+
+     }
+
+     footer {
+         font-size: var(--large-small-text);
+         padding: 20px;
+
+     }
+
+     #contact {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-evenly;
+         align-items: center;
+         width: 100%;
+     }
+
+     #contactDiv {
+         padding: 5px;
+         width: 50%;
+     }
+
+     #form {
+         padding: 5px;
+         width: 50%;
+     }
+
+ }
