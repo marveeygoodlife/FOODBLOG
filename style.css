@@ -82,7 +82,8 @@
      margin-left: auto;
      width: 25px;
      height: 25px;
-     border: tomato;
+     border: none;
+     background-color: inherit;
      display: flex;
      justify-content: space-between;
      align-items: center;
